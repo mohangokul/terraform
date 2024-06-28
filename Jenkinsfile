@@ -2,7 +2,7 @@
 node{
     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
         stage 'Checkout Terraform Project'
-            git branch: 'main', url: 'https://gitlab.com/n.neeharikareddy/terraform-jenkins-pipeline.git'
+            git branch: 'main', url: 'https://gitlab.com/ennadhiman/terraform-jenkins-pipeline.git'
         stage 'INIT'
             bat 'terraform init'
         stage 'SANITY CHECK'
